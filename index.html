@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="style/fontawesome-free-5.11.2-web/css/all.css"
+    />
+
+    <link rel="stylesheet" href="style/css/normalize.css" />
+    <link rel="stylesheet" href="style/css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="style/css/slick.css" />
+    <link rel="stylesheet" href="style/css/slick-theme.css" />
+
+    <style type="text/css">
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .slider {
+        width: 100%;
+        margin: 1rem auto;
+        padding: 0 5rem;
+      }
+
+      .slick-slide {
+        margin: 0px 20px;
+      }
+
+      .slick-slide img {
+        width: 100%;
+      }
+
+      .slick-prev:before,
+      .slick-next:before {
+        color: black;
+      }
+
+      .slick-slide {
+        transition: all ease-in-out 0.3s;
+        opacity: 0.2;
+      }
+
+      .slick-active {
+        opacity: 1;
+      }
+
+      .slick-current {
+        opacity: 1;
+      }
+
+      .bg-red {
+        background-color: rgba(255, 0, 0, 0.479) !important;
+      }
+
+      .bg-black {
+        background-color: rgba(0, 0, 0, 0.397) !important;
+      }
+      .slick-next {
+        right: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      .slick-prev {
+        left: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .slick-next,
+      .slick-prev {
+        background-color: rgba(61, 49, 49, 0.659);
+        height: 90px;
+        width: 60px;
+      }
+      .slick-next:hover,
+      .slick-prev:hover {
+        background-color: rgba(28, 24, 24, 0.782);
+      }
+      .slick-next:focus,
+      .slick-prev:focus {
+        background-color: rgba(28, 24, 24, 0.782);
+      }
+      .slick-prev:before,
+      .slick-next:before {
+        font-family: "slick";
+        font-size: 40px;
+        line-height: 1;
+
+        opacity: 0.75;
+        color: rgb(255, 255, 255);
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+
+    <title>Covid-19</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-nav shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">كورونا - <span>19</span></a>
+
+        <!-- الزر في الشاشات الصغيرة -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >الصفحة الرئيسة</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">عن الموقع</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li> -->
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Disabled</a
+              >
+            </li>
+          </ul>
+          <!-- <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form> -->
+          <a href="login.html" class="login">الدخول</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="header">
+      <div class="container-fluid">
+        <div class="col-12">
+          <div class="content-part text-center">
+            <div class="section-header">
+              <h1>كوفيد-١٩</h1>
+              <h3>إجمالي حالات كورونا المؤكدة</h3>
+              <h2 class="count-people">1132092</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="section-wrapper">
+            <div class="banner-thumb">
+              <img
+                src="img/covid-19-2.png"
+                alt="lab-banner"
+                style="max-width: 80%"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="summary" class="shadow">
+        <div class="container">
+          <h3 class="text-center mb-3 header">إجمالي الإحصائيات</h3>
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 m-auto">
+              <div class="summary-card">
+                <div class="img">
+                  <img class="img-fluid" src="img/covid-green.png" alt="" />
+                </div>
+                <div class="text">
+                  <h5 class="title">الحالات الاصابة</h5>
+                  <h2 class="number">1001202</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 m-auto">
+              <div class="summary-card">
+                <div class="img">
+                  <img class="img-fluid" src="img/covid-blue.png" alt="" />
+                </div>
+                <div class="text">
+                  <h5 class="title">الحالات الشفاء</h5>
+                  <h2 class="number">1001202</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 m-auto">
+              <div class="summary-card">
+                <div class="img">
+                  <img class="img-fluid" src="img/covid-red.png" alt="" />
+                </div>
+                <div class="text">
+                  <h5 class="title">الوفيات</h5>
+                  <h2 class="number">1001202</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="all-summary">
+      <div class="container">
+        <table id="example" class="table table-striped table-bordered shadow">
+          <thead style="background-color: white">
+            <tr>
+              <th>المحافظة</th>
+              <th>الوفيات</th>
+              <th>الاصابات</th>
+              <th>الشفاء</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="the-contry">اربيل</td>
+              <td class="count-number new_death">1146</td>
+
+              <td class="count-number new_case">51307</td>
+
+              <td class="count-number new_recovered">44122</td>
+            </tr>
+            <tr>
+              <td class="the-contry">الانبار</td>
+              <td class="count-number new_death">76</td>
+
+              <td class="count-number new_case">10910</td>
+              <td class="count-number new_recovered">9686</td>
+            </tr>
+            <tr>
+              <td class="the-contry">بابل</td>
+              <td class="count-number new_death">721</td>
+
+              <td class="count-number new_case">37691</td>
+              <td class="count-number new_recovered">35657</td>
+            </tr>
+            <tr>
+              <td class="the-contry">بغداد</td>
+              <td class="count-number new_death">3667</td>
+
+              <td class="count-number new_case">372444</td>
+              <td class="count-number new_recovered">343758</td>
+            </tr>
+
+            <tr>
+              <td class="the-contry">البصرة</td>
+              <td class="count-number new_death">1048</td>
+
+              <td class="count-number new_case">107868</td>
+              <td class="count-number new_recovered">95486</td>
+            </tr>
+            <tr>
+              <td class="the-contry">دهوك</td>
+              <td class="count-number new_death">964</td>
+
+              <td class="count-number new_case">56025</td>
+              <td class="count-number new_recovered">51285</td>
+            </tr>
+            <tr>
+              <td class="the-contry">القادسية</td>
+              <td class="count-number new_death">534</td>
+
+              <td class="count-number new_case">35517</td>
+              <td class="count-number new_recovered">33687</td>
+            </tr>
+            <tr>
+              <td class="the-contry">ديالى</td>
+              <td class="count-number new_death">329</td>
+
+              <td class="count-number new_case">46274</td>
+              <td class="count-number new_recovered">43954</td>
+            </tr>
+            <tr>
+              <td class="the-contry">ذي قار</td>
+              <td class="count-number new_death">998</td>
+
+              <td class="count-number new_case">40956</td>
+              <td class="count-number new_recovered">39260</td>
+            </tr>
+            <tr>
+              <td class="the-contry">السليمانية</td>
+              <td class="count-number new_death">2030</td>
+
+              <td class="count-number new_case">52674</td>
+              <td class="count-number new_recovered">45472</td>
+            </tr>
+            <tr>
+              <td class="the-contry">صلاح الدين</td>
+              <td class="count-number new_death">324</td>
+
+              <td class="count-number new_case">24347</td>
+              <td class="count-number new_recovered">20246</td>
+            </tr>
+            <tr>
+              <td class="the-contry">كركوك</td>
+              <td class="count-number new_death">918</td>
+
+              <td class="count-number new_case">43696</td>
+              <td class="count-number new_recovered">41025</td>
+            </tr>
+            <tr>
+              <td class="the-contry">كربلاء</td>
+              <td class="count-number new_death">685</td>
+
+              <td class="count-number new_case">44369</td>
+              <td class="count-number new_recovered">42688</td>
+            </tr>
+            <tr>
+              <td class="the-contry">المثنى</td>
+              <td class="count-number new_death">284</td>
+
+              <td class="count-number new_case">20045</td>
+              <td class="count-number new_recovered">14858</td>
+            </tr>
+            <tr>
+              <td class="the-contry">ميسان</td>
+              <td class="count-number new_death">586</td>
+
+              <td class="count-number new_case">40110</td>
+              <td class="count-number new_recovered">36859</td>
+            </tr>
+            <tr>
+              <td class="the-contry">النجف</td>
+              <td class="count-number new_death">487</td>
+
+              <td class="count-number new_case">55733</td>
+              <td class="count-number new_recovered">49640</td>
+            </tr>
+            <tr>
+              <td class="the-contry">نينوى</td>
+              <td class="count-number new_death">531</td>
+
+              <td class="count-number new_case">30922</td>
+              <td class="count-number new_recovered">28843</td>
+            </tr>
+            <tr>
+              <td class="the-contry">واسط</td>
+              <td class="count-number new_death">555</td>
+
+              <td class="count-number new_case">61204</td>
+              <td class="count-number new_recovered">52101</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="test">
+      <div class="container">
+        <h1 class="text-center h1-header">أعراض فيروس كورونا</h1>
+        <h4 class="text-center mb-5">ما أعراض فيروس كورونا الجديد؟</h4>
+        <div class="row">
+          <div class="col-4 mb-5">
+            <div class="symptom-card">
+              <div class="img mb-3">
+                <img class="img-fluid" src="img/coronavirus-symptoms/06.png" alt="" />
+              </div>
+              <h3>السعال</h3>
+            </div>
+          </div>
+          <div class="col-4 mb-5">
+            <div class="symptom-card">
+              <div class="img mb-3">
+                <img class="img-fluid" src="img/coronavirus-symptoms/02.png" alt="" />
+              </div>
+              <h3>الحمى الساخنة</h3>
+            </div>
+          </div>
+          <div class="col-4 mb-5">
+            <div class="symptom-card">
+              <div class="img mb-3">
+                <img class="img-fluid" src="img/coronavirus-symptoms/01.png" alt="" />
+              </div>
+              <h3>إلتهاب الحلق</h3>
+            </div>
+          </div>
+          <div class="col-4 mb-5">
+            <div class="symptom-card">
+              <div class="img mb-3">
+                <img class="img-fluid" src="img/coronavirus-symptoms/03.png" alt="" />
+              </div>
+              <h3>الصداع</h3>
+            </div>
+          </div>
+          <div class="col-4 mb-5">
+            <div class="symptom-card">
+              <div class="img mb-3">
+                <img class="img-fluid" src="img/coronavirus-symptoms/05.png" alt="" />
+              </div>
+              <h3>ضيق في التنفس</h3>
+            </div>
+          </div>
+          <div class="col-4 mb-5">
+            <div class="symptom-card">
+              <div class="img mb-3">
+                <img class="img-fluid" src="img/coronavirus-symptoms/04.png" alt="" />
+              </div>
+              <h3>الارتباك</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <h1>Almost before we knew it, we had left the ground.</h1> -->
+
+    <section id="slider" class="">
+      <h1 class="text-center h1-header">كيف نحافظ على صحتنا</h1>
+      <div class="regular slider">
+        <div>
+          <div class="card">
+            <div class="img">
+              <img src="img/home.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="text-center">البقاء في المنزل</h5>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="img">
+              <img src="img/mask.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="text-center"> ارتداء الكمامات </h5>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="img">
+              <img src="img/cleaning-hands.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="text-center"> غسل اليدين باستمرار</h5>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="img">
+              <img src="img/Cook-food.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="text-center"> طبخ الطعام بشكل جيد</h5>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="img">
+              <img src="img/Doctor.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="text-center"> البحث عن طبيب في حالة الشك</h5>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="img">
+              <img src="img/Crowding.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h5 class="text-center"> تجنب الاماكن المزدحمة</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="social-Media my-auto mt-2">
+          <a href="#">
+            <img src="img/icons/facebook.png" alt="facebook icons" />
+          </a>
+          <a href="#">
+            <img src="img/icons/instagram.png" alt="facebook icons" />
+          </a>
+          <a href="#">
+            <img src="img/icons/twitter.png" alt="facebook icons" />
+          </a>
+          <a href="#">
+            <img src="img/icons/linkedin.png" alt="facebook icons" />
+          </a>
+        </div>
+        <h5 class="text-center mt-4 mb-0">
+          Covid-19 &copy; for University of Anbar
+        </h5>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="style/js/jquery/jquery-3.4.1.js"></script> -->
+
+    <script src="style/js/popper.js"></script>
+    <script src="style/js/bootstrap-js/bootstrap.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+    <script src="style/js/jquery-3.5.1.min.js" type="text/javascript"></script>
+    <script src="style/js/slick.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var width = $(window).width();
+
+      if (width >= 992) {
+        $(".regular").slick({
+          dots: false,
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          prevArrow:
+            '<button type="button" data-role="none" class="slick-prev test">Previous</button>',
+        });
+      } else if (width >= 768 && width < 992) {
+        $(".regular").slick({
+          dots: false,
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          prevArrow:
+            '<button type="button" data-role="none" class="slick-prev test">Previous</button>',
+        });
+      } else if (width >= 500 && width < 768) {
+        $(".regular").slick({
+          dots: false,
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          prevArrow:
+            '<button type="button" data-role="none" class="slick-prev test">Previous</button>',
+        });
+      } else if (width < 500) {
+        $(".regular").slick({
+          dots: false,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow:
+            '<button type="button" data-role="none" class="slick-prev test">Previous</button>',
+        });
+      }
+
+      //$(window).on("resize", function () {
+        //width = $(this).width();
+        //$(location).prop("href", location.href);
+      //});
+    </script>
+
+    <script src="style/js/myjs.js"></script>
+
+    <!-- <script src="style/js/functions.js"></script> -->
+  </body>
+</html>

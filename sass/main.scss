@@ -1,0 +1,458 @@
+@import 'bootstrap5/bootstrap';
+// @import 'bootstrap/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+
+/* top | right | bottom | left */
+
+
+
+
+
+
+
+
+
+
+
+
+
+$font-primary: 'Tajawal',Arial, sans-serif;
+$bg-body: #f0f0f0;
+
+$bg-primary: #f5f5f5;
+$bg-secondary: #fd076d;
+$bg-footer: #353535;
+
+
+$color-covid: #2a4e72;
+$color-19: #ff2881;
+
+$nav-link-color: #34495e;
+$nav-link-color-active: #2c3e50;
+$nav-link-color-disabled: #bdc3c7;
+
+$nav-link-color-active-bg: #d4e4f3;
+$nav-link-color-active-border: #5d5f61;
+
+$nav-link-color-hover-bg: #d4e4f3;
+$nav-link-color-hover-border: #5d5f61;
+
+
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease;
+    -o-transition:      all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: 	all $transition ease;
+    transition:         all $transition ease;
+}
+@mixin margin-y($x) {
+	margin-left: $x !important;
+	margin-right: $x !important;
+}
+@mixin margin-x($x) {
+	margin-top: $x !important;
+	margin-bottom: $x !important;
+}
+@mixin margin-xy($x , $y) {
+	margin-top: $x !important;
+	margin-bottom: $x !important;
+	margin-left: $y !important;
+	margin-right: $y !important;
+}
+@mixin padding-y($x) {
+	padding-left: $x !important;
+	padding-right: $x !important;
+}
+@mixin padding-x($x) {
+	padding-top: $x !important;
+	padding-bottom: $x !important;
+}
+@mixin padding-xy($x , $y) {
+	padding-top: $x !important;
+	padding-bottom: $x !important;
+	padding-left: $y !important;
+	padding-right: $y !important;
+}
+
+@mixin bg-img($color1, $color2, $image) {
+	background-image: linear-gradient(to right bottom, $color1, $color2), url($image);
+}
+
+body {
+	font-family: $font-primary;
+	background: $bg-body;
+	font-size: 16px;
+	line-height: 1.8;
+	font-weight: 400;
+	box-sizing: border-box;
+}
+
+a {
+	@include transition(.3s);
+	color: rgb(71, 70, 70);
+	text-decoration: none;
+	&:hover, &:focus {
+		color: rgb(71, 70, 70);
+		outline: none !important;
+	}
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	line-height: 1.5;
+	color: rgba(0,0,0,.8);
+	font-weight: 400;
+}
+
+//  *utilityClasses
+.oh{overflow: hidden !important;}
+.ml--2{margin-left: -2px;}
+.mr--2{margin-right: -2px;}
+.pt-1-added {padding-top: (3rem + 5.1625rem) !important;}
+
+.h1-header{
+	font-weight: 600;
+	font-size: 3rem;
+}
+
+// Navbare
+.bg-nav {
+    background-color: #f8f9fa !important;
+}
+.navbar{
+	padding: 0;
+	.container-fluid{
+		max-width: 1250px;
+		flex-direction: row-reverse;
+		
+		.navbar-brand{
+			font-weight: 600;
+			font-size: 1.5rem;
+			color: $color-covid;
+			span{
+				color: $color-19;
+			}
+		}
+
+		.navbar-collapse{
+			flex-direction: row-reverse;
+			.me-auto{
+				margin: auto;
+			}
+
+			.navbar-nav{
+				$color: #0cf;
+				flex-direction: row-reverse;
+				align-items: center;
+				.nav-link{
+					position: relative;
+					color: $nav-link-color;
+					font-size: 1.2rem;
+					font-weight: 500;
+					border-bottom: transparent 2px solid;
+				}
+
+				.nav-link:hover{
+					// font-size: 1.4rem;
+					background-color: $nav-link-color-hover-bg;
+					border-bottom: $nav-link-color-hover-border 2px solid;
+				}
+				.active{
+					// font-size: 1.4rem;
+					color: $nav-link-color-active;
+					background-color: $nav-link-color-active-bg;
+					border-bottom: $nav-link-color-active-border 2px solid;
+				}
+				.disabled{
+					color: $nav-link-color-disabled;
+				}
+			}
+		}
+		.login{
+			font-size: 1.2rem;
+			font-weight: 500;
+			&:hover{
+				color: #3a79b8;
+			}
+		}
+
+
+	}
+}
+// End of Navbar
+
+// Start of header
+#header{
+	position: relative;
+	@include padding-x(3rem);
+	// background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(/img/covid-19.png);
+	background-image: linear-gradient(to top , rgba(148, 177, 147, 0.89), rgba(230, 229, 229, 0.925)), url(/img/covid-19.png);
+	background-size: cover;
+	background-position: top;
+
+	.section-header{
+		h1{
+			color: #2a4e72 !important;
+			font-size: 4rem;
+			font-weight: 600;
+		}
+		h2{
+			color: #ff2881 !important;
+			font-size: 3rem;
+			font-weight: 600;
+		}
+		h3{
+			color: #2a4e72 !important;
+			font-size: 2rem;
+			font-weight: 600;
+		}
+	}
+	.section-wrapper{
+		text-align: center;
+	}
+
+
+	// start of summary
+	#summary{
+		overflow: hidden;
+		width: 90%;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%,50%);
+		padding: 1rem;
+		background-color: #f7f7f7;
+		direction: rtl;
+		border-radius: 5px;
+		.header{
+			font-weight: 500;
+		}
+		.summary-card{
+			display: flex;
+			align-items: center;
+
+			.img{
+				width: 95px;
+			}
+			.text{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin-right: 1rem;
+				h5,h2{
+					padding: 0;
+					margin: 0;
+				}
+				.title{
+					color: #5d5f61;
+				}
+			}
+		}
+	}
+	// end of summary
+
+	// display: none;
+}
+//end of header
+
+//start of all-summary
+#all-summary{
+	background-color: $bg-primary;
+
+	direction: rtl;
+	padding: 9rem 0 5rem 0;
+
+	td.new_death {
+		background: #34495e;
+		color: #fff;
+	}
+	td.new_case {
+		background: #ff6b6b;
+	}
+	td.new_recovered {
+		background: #38ada9;
+		color: #fff;
+	}
+
+	td.the-contry {
+		background: #e7f5f4;
+	}
+}
+//end of all-summary
+
+//start of test
+#test{
+	background-color: $bg-secondary;
+	padding: 5rem;
+	direction: rtl;
+	h1,h4,h3{
+		color: white;
+	}
+	// h1{
+	// 	font-weight: 600;
+	// }
+	h3{
+		// background-color: #0cf;
+		font-weight: 500;
+	}
+
+	.row{
+		// background-color: #d0fffd;
+		.symptom-card{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			// background-color: #34495e;
+			.img{
+				width: 150px;
+				height: 200px;
+				img{
+					width: 100%;
+					height: 100%
+				}
+				// background-color: #2a4e72;
+			}
+		}
+	}
+
+}
+//end of test
+
+
+//start of login
+#login{
+	@include padding-x(3rem);
+	@include bg-img(rgba(31, 214, 247, 0.767),rgba(27, 233, 72, 0.808) , '/img/covid-19.png');
+	height: 550px;
+	.container{
+		.card{
+			direction: rtl;
+			max-width: 500px;
+			@include margin-y(auto);
+			@include padding-xy(2rem, 1rem);
+			border-radius: 10px;
+			h3{
+				font-weight: 500;
+				color: #5c5a5a;	
+			}
+			.text-center{
+				a{
+					color: #3a79b8;
+				}
+			}
+
+		}
+	}
+}
+//end of login
+
+//start of register
+#register{
+	@include padding-x(3rem);
+	@include bg-img(rgba(31, 214, 247, 0.767),rgba(27, 233, 72, 0.808) , '/img/covid-19.png');
+	// height: 550px;
+	.container{
+		.card{
+			direction: rtl;
+			max-width: 500px;
+			@include margin-y(auto);
+			@include padding-xy(2rem, 1rem);
+			border-radius: 10px;
+			h3{
+				font-weight: 500;
+				color: #5c5a5a;	
+			}
+			.text-center{
+				a{
+					color: #3a79b8;
+				}
+			}
+
+		}
+	}
+}
+//end of register
+
+
+
+
+
+
+
+//start of test
+#footer{
+	@include padding-x(1rem);
+	background-color: $bg-footer;
+	.container{
+		h5{
+			color: #e7f5f4;
+		}
+		.social-Media{
+			// background-color: #0cf;
+			display: flex;
+			// align-items: center;
+			justify-content: center;
+			a{
+				@include margin-y(1rem);
+				img{
+					// background-color: #ee0909;
+					// color: #ffffff !important;
+					width: 2rem;
+					height: 2rem;
+				}
+			}
+		}
+	}
+}
+//end of test
+
+//start of test
+#slider{
+	@include padding-x(5rem);
+	h1{
+		font-weight: 500;
+		margin-bottom: 2rem;
+	}
+	.card{
+		border: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: transparent;
+		// background-color: #0cf;
+		.img{
+			// background: red;
+			width: 180px;
+			height: 200px;
+		}
+		.card-body{
+			h5{
+				font-weight: 500;
+			}
+		}
+	}
+}
+//end of test
+
+
+//start of test
+//end of test
+
+//start of test
+//end of test
+
+//start of test
+//end of test
+
+
