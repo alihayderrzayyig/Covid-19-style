@@ -1,19 +1,10 @@
-@import 'bootstrap5/bootstrap';
+// @import 'bootstrap5/bootstrap';
 // @import 'bootstrap/variables';
 
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
 
 /* top | right | bottom | left */
-
-
-
-
-
-
-
-
-
 
 
 
@@ -48,6 +39,8 @@ $nav-link-color-hover-border: #5d5f61;
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+
+
 @mixin transition($transition) {
     -moz-transition:    all $transition ease;
     -o-transition:      all $transition ease;
@@ -125,6 +118,7 @@ h1, h2, h3, h4, h5,
 	font-size: 3rem;
 }
 
+
 // Navbare
 .bg-nav {
     background-color: #f8f9fa !important;
@@ -133,7 +127,7 @@ h1, h2, h3, h4, h5,
 	padding: 0;
 	.container-fluid{
 		max-width: 1250px;
-		flex-direction: row-reverse;
+		flex-direction: row;
 		
 		.navbar-brand{
 			font-weight: 600;
@@ -161,6 +155,9 @@ h1, h2, h3, h4, h5,
 					font-weight: 500;
 					border-bottom: transparent 2px solid;
 				}
+				.navbar-brand{
+					display: none !important;  //********
+				}
 
 				.nav-link:hover{
 					// font-size: 1.4rem;
@@ -178,7 +175,30 @@ h1, h2, h3, h4, h5,
 				}
 			}
 		}
+		.btn-group{
+			a{
+				img{
+					object-fit: cover;
+					// width: 100%;
+					// height: 100%;
+				}
+			}
+			.dropdown-menu{
+				.dropdown-item{
+					display: flex;
+					align-items: center;
+					justify-content: right;
+					i{
+						font-size: 1.5rem;
+						display: inline-block;
+						margin-left: .5rem;
+					}
+				}
+			}
+		}
 		.login{
+			margin-left: 1rem;
+			text-decoration: none;
 			font-size: 1.2rem;
 			font-weight: 500;
 			&:hover{
@@ -384,7 +404,41 @@ h1, h2, h3, h4, h5,
 }
 //end of register
 
+//start of about-header
+#about-header{
+	display: block;
+	overflow: hidden;
+	height: 350px;
+	background-color: $bg-primary;
+	.container-fluid{
+		padding: 0;
+		position: absolute;
+		.image{
+			background-color: #353535;
+			display: block;
+			overflow: hidden;
+			width: 50%;
+			height: 100%;
+			float: left;
+			img{
+				display: block;
+				width: 100%;
+				height: 350px;
+			}
+		}
 
+		.text{
+			h1{
+				font-weight: 500;
+			}
+			@include padding-y(2rem);
+			direction: rtl;
+			width: 50%;
+			float: right;
+		}
+	}
+}
+//end of about-header
 
 
 
@@ -446,13 +500,129 @@ h1, h2, h3, h4, h5,
 //end of test
 
 
-//start of test
-//end of test
+
+
+//start of about-programmer
+#about-programmer{
+	@include padding-x(5rem);
+	background-color: white;
+	.container{
+		.text-center{
+			font-weight: 500;
+		}
+		.row{
+			.card{
+				.img{
+					// display: none;
+					width: 150px;
+					height: 150px;
+					img{
+						object-fit: cover;
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+//end of about-programmer
 
 //start of test
 //end of test
 
-//start of test
-//end of test
+//خاصة بتعديل الناف بار
+@media screen and (max-width: 991px) {
 
+	.navbar{
+		padding: 0;
+		.container-fluid{
+			padding: 0;//*********
+			.navbar-brand{
+				display: none;  //********
+			}
+	
+			.navbar-collapse{
+				.navbar-nav{
+					display: block;   //******
+					text-align: center;   //*********
+					.navbar-brand{
+						display: block !important;  //********
+					}
+						
+				}
+			}
+			.btn-group{
+				margin-left: 1rem;
+			}
+			.navbar-toggler{
+				margin: .5rem;
+				margin-left: 1rem;
+			}
+			.navbar-toggler:focus {
+				box-shadow: 0px 0px 5px $nav-link-color-active-border;
+			}
+		}
+	}
 
+	#about-header{
+		// display: block;
+		// overflow: hidden;
+		height: 450px;
+		// padding: 2rem;
+		// background-color: $bg-primary;
+		.container-fluid{
+			// padding: 0;
+			position: relative;//**
+			.image{
+				// display: block;
+				position: absolute;
+				// display: block;
+				top: 0;
+				left: 0;
+				// background-color: #353535;
+				// overflow: hidden;
+				width: 100%;
+				height: 450px;
+				// float: none;
+				z-index: 1;
+				img{
+					display: block;
+					width: 100%;
+					height: 450px;
+					// z-index: 1000;
+				}
+			}
+			.image::before{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #070f18ef;
+				z-index: 2;
+			}
+	
+			.text{
+				position: absolute;
+				overflow: hidden;
+				display: block;
+				color: $bg-body;
+				h1{
+					color: $bg-body;
+					font-weight: 500;
+				}
+				p{
+					font-size: 1.2rem;
+				}
+				@include padding-y(2rem);
+				direction: rtl;
+				width: 100%;
+				float: none;
+				z-index: 3;
+				// background-color: transparent;
+			}
+		}
+	}
+}
