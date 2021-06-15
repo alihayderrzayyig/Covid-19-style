@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="style/fontawesome-free-5.11.2-web/css/all.css"
+    />
+
+    <link rel="stylesheet" href="style/css/normalize.css" />
+    <link rel="stylesheet" href="style/bootstrap-5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/bootstrap-5/css/all.css" />
+    <link rel="stylesheet" href="style/css/style.css" />
+    <!-- <link rel="shortcut icon" href="img/favicon.png" type="image/png" /> -->
+
+    <title>Covid-19</title>
+  </head>
+  <body>
+    <nav class="shadow-sm navbar navbar-expand-lg navbar-light bg-nav">
+      <div class="container-fluid">
+        <div class="btn-group">
+          <a
+            class="rounded-circle shadow overflow-hidden"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="img/user.jpg"
+              width="30"
+              height="30"
+              class="d-inline-block align-top"
+              alt=""
+              loading="lazy"
+            />
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <form action="#" method="post">
+              <!-- @csrf -->
+              <button type="submit" class="dropdown-item">
+                تسجيل الخروج
+                <i class="fas fa-power-off"></i>
+              </button>
+            </form>
+          </ul>
+        </div>
+
+        <!-- الزر في الشاشات الصغيرة -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="mb-2 navbar-nav me-auto mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >الرئيسية</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="vaccine.html">اللقاحات</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="Talk-doctor.html">تحدث مع طبيب</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="search-doctor.html"
+                >الاطباء المعتمدين</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">عن الموقع</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="navbar-brand" href="#">كورونا - <span>19</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <a class="navbar-brand" href="#">كورونا - <span>19</span></a>
+      </div>
+    </nav>
+
+    <section id="vaccine-header">
+      <div class="container-fluid m-0 p-0">
+        <div class="img">
+          <img src="img/vaccine.jpg" alt="" srcset="" />
+        </div>
+        <div class="header">
+          <h1 class="text-center h1-header text-white">انواع اللقاحات</h1>
+          <h3 class="text-center h1-header text-white">
+            Covid - <span>19</span>
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="vaccine-type">
+      <div class="container">
+        <div class="text">
+          <h3>هنالك عدة عوامل تحدد الفرق بين لقاح وآخر</h3>
+          <ol>
+            <li>
+              <p>
+                الفعالية: وهي النسبة المئوية للحد من المرض في مجموعة من الأشخاص
+                الذين تلقوا اللقاح مقارنة بالمجموعة التي لم تتلقَّ اللقاح.
+              </p>
+            </li>
+            <li><p>عدد جرعات اللقاح.</p></li>
+            <li><p>السعر.</p></li>
+            <li><p>درجة الحرارة اللازمة للتخزين.</p></li>
+          </ol>
+          <p>
+            ويظهر الجدول المرفق مقارنة بين اللقاحات التالية، ونشير إلى أن هذه
+            الأرقام تقريبية، وقد تتغير بناء على تغير الدراسات أو أسعار البيع أو
+            ظهور معطيات جديدة:
+          </p>
+        </div>
+
+        <div class="border p-3 m-0 mt-5">
+          <table class="table table-striped table-hover table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">الشركة المصنعة</th>
+                <th scope="col">عدد الجرعات</th>
+                <th scope="col">الفعالية</th>
+                <th scope="col">درجة الحرارة</th>
+                <th scope="col">السعر للجرعة الواحدة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">معهد جماليا, لقاح "سبوتنك-في"</th>
+                <td>2</td>
+                <td>92%</td>
+                <td>الثلاجة العادية 2-8 درجة مئوية</td>
+                <td>10$</td>
+              </tr>
+              <tr>
+                <th scope="row">معهد جماليا, لقاح "سبوتنك-في"</th>
+                <td>2</td>
+                <td>92%</td>
+                <td>الثلاجة العادية 2-8 درجة مئوية</td>
+                <td>10$</td>
+              </tr>
+              <tr>
+                <th scope="row">معهد جماليا, لقاح "سبوتنك-في"</th>
+                <td>2</td>
+                <td>92%</td>
+                <td>الثلاجة العادية 2-8 درجة مئوية</td>
+                <td>10$</td>
+              </tr>
+              <tr>
+                <th scope="row">معهد جماليا, لقاح "سبوتنك-في"</th>
+                <td>2</td>
+                <td>92%</td>
+                <td>الثلاجة العادية 2-8 درجة مئوية</td>
+                <td>10$</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="des">
+          <h2>1- لقاح معهد جماليا الروسي</h2>
+          <p>
+            اسم اللقاح "سبوتنيك في" (Sputnik V)، وطوّره معهد جماليا في موسكو.
+            واللقاح الروسي قائم على نواقل من الفيروس الغدي (Adenoviral vectors)،
+            وتعد الفيروسات الغدية البشرية من الأكثر سهولة وبساطة بالنسبة لعملية
+            التعديل، ولذلك اتسع نطاق انتشارها كنواقل. و"النواقل" (vectors) هي
+            حوامل يمكنها إيصال المادة الجينية من فيروس آخر إلى الخلية. وتتم
+            إزالة المادة الجينية للفيروس الغدي الذي يسبب العدوى، بينما يدخل جين
+            يحمل كودا "شيفرة" لبروتين من فيروس آخر، وفي الحالة الراهنة من فيروس
+            كورونا المستجد، واسمه العلمي "سارس كوف 2". وهذا المكون المضاف الجديد
+            يساعد الجهاز المناعي في الاستجابة وإنتاج الأجسام المضادة التي تحميه
+            من العدوى.
+          </p>
+
+          <h2>1- لقاح معهد جماليا الروسي</h2>
+          <p>
+            اسم اللقاح "سبوتنيك في" (Sputnik V)، وطوّره معهد جماليا في موسكو.
+            واللقاح الروسي قائم على نواقل من الفيروس الغدي (Adenoviral vectors)،
+            وتعد الفيروسات الغدية البشرية من الأكثر سهولة وبساطة بالنسبة لعملية
+            التعديل، ولذلك اتسع نطاق انتشارها كنواقل. و"النواقل" (vectors) هي
+            حوامل يمكنها إيصال المادة الجينية من فيروس آخر إلى الخلية. وتتم
+            إزالة المادة الجينية للفيروس الغدي الذي يسبب العدوى، بينما يدخل جين
+            يحمل كودا "شيفرة" لبروتين من فيروس آخر، وفي الحالة الراهنة من فيروس
+            كورونا المستجد، واسمه العلمي "سارس كوف 2". وهذا المكون المضاف الجديد
+            يساعد الجهاز المناعي في الاستجابة وإنتاج الأجسام المضادة التي تحميه
+            من العدوى.
+          </p>
+
+          <h2>1- لقاح معهد جماليا الروسي</h2>
+          <p>
+            اسم اللقاح "سبوتنيك في" (Sputnik V)، وطوّره معهد جماليا في موسكو.
+            واللقاح الروسي قائم على نواقل من الفيروس الغدي (Adenoviral vectors)،
+            وتعد الفيروسات الغدية البشرية من الأكثر سهولة وبساطة بالنسبة لعملية
+            التعديل، ولذلك اتسع نطاق انتشارها كنواقل. و"النواقل" (vectors) هي
+            حوامل يمكنها إيصال المادة الجينية من فيروس آخر إلى الخلية. وتتم
+            إزالة المادة الجينية للفيروس الغدي الذي يسبب العدوى، بينما يدخل جين
+            يحمل كودا "شيفرة" لبروتين من فيروس آخر، وفي الحالة الراهنة من فيروس
+            كورونا المستجد، واسمه العلمي "سارس كوف 2". وهذا المكون المضاف الجديد
+            يساعد الجهاز المناعي في الاستجابة وإنتاج الأجسام المضادة التي تحميه
+            من العدوى.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="my-auto mt-2 social-Media">
+          <a href="#">
+            <img src="img/icons/facebook.png" alt="facebook icons" />
+          </a>
+          <a href="#">
+            <img src="img/icons/instagram.png" alt="facebook icons" />
+          </a>
+          <a href="#">
+            <img src="img/icons/twitter.png" alt="facebook icons" />
+          </a>
+          <a href="#">
+            <img src="img/icons/linkedin.png" alt="facebook icons" />
+          </a>
+        </div>
+        <h5 class="mt-4 mb-0 text-center">
+          Covid-19 &copy; for University of Anbar
+        </h5>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="style/js/jquery/jquery-3.4.1.js"></script> -->
+
+    <script src="style/js/popper.js"></script>
+    <script src="style/js/bootstrap-js/bootstrap.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <script src="style/js/myjs.js"></script>
+  </body>
+</html>
